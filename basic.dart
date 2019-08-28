@@ -4,8 +4,9 @@
 // 02. Classe Main()
 // 03. Variáveis
 // 04. Operações Matemática
+// 05. Concatenação
 
-main () {
+main() {
 
   print('Hello World');
   print('Segunda impressão...'); // imprimindo string...
@@ -34,5 +35,9 @@ main () {
 
   var rest = 120 % 120;
   print(rest); // rest of division
+
+  var text1 = 'Hello';
+  var text2 = 'World';
+  print(text1 + ' ' + text2); // output: Hello World
 
 }
