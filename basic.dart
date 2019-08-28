@@ -3,6 +3,7 @@
 // 01. Outputs
 // 02. Classe Main()
 // 03. Variáveis
+// 04. Operações Matemática
 
 main () {
 
@@ -19,5 +20,19 @@ main () {
 
   var number = 2; // int
   print(number); // output: 2
-  
+
+  // Operations
+
+  var sum = 2 + 5;
+  print(sum); // output: 7
+
+  var number1 = 10;
+  var number2 = 120;
+  print(number1 + number2); // output: 130
+  print(number1 * number2); // output: 1200
+  print(number1 / number2); // output: 0.083333333
+
+  var rest = 120 % 120;
+  print(rest); // rest of division
+
 }
