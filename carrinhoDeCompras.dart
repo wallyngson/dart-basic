@@ -6,50 +6,41 @@ main() {
 
   List<String> produtos = [];
 
+    while (true) {
+      print('=== DIGITE UM NOME ===');
+      String name = stdin.readLineSync();
 
-  while (true) {
-    print('=== DIGITE UM NOME ===');
-    String name = stdin.readLineSync();
+      // imprimindo todos os produtos...
+      if (name == 'imprimir') {
+        print('');
+        print(imprimiProdutos(produtos));
+    
+      // saindo do programa...
+      } else if (name == 'sair') {
+        print('');
+        print('Obrigado por usar nosso algoritmo... Até mais!');
+        break;
 
-    // imprimindo todos os produtos...
-    if (name == 'imprimir') {
-      String lista = imprimiProdutos(produtos);
-      print(lista);
-   
-    // saindo do programa...
-    } else if (name == 'sair') {
-      print('Obrigado por usar nosso algoritmo... Até mais!');
-      break;
+      // removendo item...
+      } else if (name == 'remover') {
+        print('');
+        print('=== QUAL ITEM REMOVER? ===');
+        print(imprimiProdutos(produtos));
 
-    // removendo item...
-    } else if (name == 'remover') {
-      print('=== QUAL ITEM REMOVER? ===');
-      print(imprimiProdutos(produtos));
-      String remover = stdin.readLineSync();
-      print('\n');
+        String index = stdin.readLineSync();
+        print(removerProduto(produtos, index));
 
-      // removendo por indice...
-      if (remover == 'indice') {
-        print('DIGITE O INDICE:');
-        String indiceASerRemovido = stdin.readLineSync();
-        produtos.removeAt(int.parse(indiceASerRemovido));
-        print('ITEM REMOVIDO!\n');
-      
-      // se não remove pelo nome do produto...
-      } else {
-        print('DIGITE O PRODUTO:');
-        String nomeDoProduto = stdin.readLineSync();
-        produtos.remove(nomeDoProduto);
-        print('ITEM REMOVIDO!\n');
+        }
+      // adiclscionando produto...
+      else {
+        produtos.add(name);
+        print('');
       }
     }
-
-    // adicionando produto...
-    produtos.add(name);
-  }
-
 }
 
+// percorrendo toda a lista de produtos, e imprimindo:
+// 00 : NOMEDOPRODUTO
 imprimiProdutos(produtos) {
   String listaDosProdutos = '';
 
@@ -58,4 +49,10 @@ imprimiProdutos(produtos) {
   }
   
   return listaDosProdutos;
+}
+
+// remove um determinado produto de um array...
+removerProduto(produtos, index) {
+  produtos.removeAt(int.parse(index));
+  return 'ITEM REMOVIDO!\n';
 }
