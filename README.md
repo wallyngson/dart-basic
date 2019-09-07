@@ -1,4 +1,3 @@
-A sample command-line application.
+**Basic of Language Dart**
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+A brief introduction to dart language (https://dart.dev/). Following the course (https://balta.io/). Studying about the basic syntax and dart programming logic. Three simple algorithms we're developed just addressing the fundamentals of language. Next step is learning flutter (https://flutter.dev/), let's go to the adventure with me?
